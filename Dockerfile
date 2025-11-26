@@ -1,2 +1,2 @@
-FROM --platform=${BUILDPLATFORM} nginx:latest
+FROM nginx:latest
 COPY src /usr/share/nginx/html
