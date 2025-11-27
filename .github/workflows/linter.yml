@@ -1,0 +1,20 @@
+name: Run linters
+
+on: [workflow_call]
+
+jobs:
+  lint:
+    name: Run linters
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+      attestations: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v2
+      - name: HTML5 Validator
+        uses: Cyb3r-Jak3/html5validator-action@v7.2.0
+        with:
+          root: src/
+          log_level: INFO
