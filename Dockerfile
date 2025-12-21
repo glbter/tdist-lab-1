@@ -5,7 +5,9 @@ RUN mkdir ./bin
 COPY ./ ./
 RUN go build -o ./bin/trist ./
 
-FROM alpine:latest
+FROM ubuntu:latest
+
+RUN mkdir /app
 
 COPY --from=builder /app/bin/trist /app
 
