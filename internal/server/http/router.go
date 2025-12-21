@@ -19,10 +19,7 @@ func NewRouter(logger *zap.Logger) (chi.Router, error) {
 	r := chi.NewRouter()
 	r.Use(md.LoggingMiddleware)
 
-	r.Route("/api", func(r chi.Router) {
-		r.Get("/hello", hs.Hello)
-	})
-
+	r.Get("/hello", hs.Hello)
 	r.Mount("/metrics", promhttp.Handler())
 
 	return r, nil

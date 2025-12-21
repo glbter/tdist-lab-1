@@ -1,11 +1,11 @@
 services:
   hello:
     container_name: trist_hello
-    image: danylovitkovskyi/tdist-lab-4:latest
+    image: trist_hello #danylovitkovskyi/tdist-lab-4:latest
     working_dir: /app
     command: ./trist
     ports:
-      - 80:80
+      - 80:8080
     networks:
       - fullstack
 
@@ -28,6 +28,13 @@ services:
       - 3000:3000
     networks:
       - fullstack
+    volumes:
+      # Mount the provisioning configs
+      - ./grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
+      - ./grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards
+      # Mount the actual JSON dashboard files
+      - ./grafana/dashboards:/var/lib/grafana/dashboards
+    restart: unless-stopped
 
   watchtower:
     image: containrrr/watchtower:latest

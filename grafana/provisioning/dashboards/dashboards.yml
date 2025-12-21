@@ -1,0 +1,13 @@
+# provisioning/dashboards.yml
+apiVersion: 1
+
+providers:
+  - name: 'trist dashboard'
+    orgId: 1
+    folder: ''
+    type: file
+    disableDeletion: false
+    editable: true
+    updateIntervalSeconds: 10
+    options:
+      path: /var/lib/grafana/dashboards

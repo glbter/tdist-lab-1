@@ -1,0 +1,16 @@
+apiVersion: 1
+datasources:
+  - name: Prometheus
+    type: prometheus
+    access: proxy
+    orgId: 1
+    uid: cf7s9giel4xkwa 
+    url: http://prometheus:9090 # The URL of your data source
+    basicAuth: false
+    isDefault: true
+    # jsonData:
+    #   # Additional data source specific JSON configuration can go here
+    #   tlsAuth: false
+    # secureJsonData:
+    #   # Secrets like passwords should be in secureJsonData
+    #   basicAuthPassword: "" 
