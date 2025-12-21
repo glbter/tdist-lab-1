@@ -1,7 +1,7 @@
 services:
   hello:
     container_name: trist_hello
-    image: trist_hello #danylovitkovskyi/tdist-lab-4:latest
+    image: danylovitkovskyi/tdist-lab-4:latest
     working_dir: /app
     command: ./trist
     ports:
