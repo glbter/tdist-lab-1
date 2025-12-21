@@ -6,11 +6,6 @@ jobs:
   lint:
     name: Run linters
     runs-on: ubuntu-latest
-    # permissions:
-    #   # packages: write
-    #   # contents: read
-    #   # attestations: write
-    #   # id-token: write
     steps:
       - uses: actions/checkout@v2
       - name: HTML5 Validator
