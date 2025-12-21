@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - 'main'
+      - 'prometheus_grafana'
 
 jobs:
   push_to_registry:
