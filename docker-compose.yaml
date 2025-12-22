@@ -18,7 +18,8 @@ services:
       - fullstack
     volumes:
       - ./prometheus:/etc/prometheus
-      - prometheus-data:/prometheus
+      # - prometheus-data:/prometheus
+      - /root/data:/prometheus
     command: --web.enable-lifecycle --config.file=/etc/prometheus/prometheus.yml
 
   grafana:
@@ -48,5 +49,5 @@ networks:
   fullstack:
     driver: bridge
 
-volumes:
-  prometheus-data:
+# volumes:
+#   prometheus-data:
