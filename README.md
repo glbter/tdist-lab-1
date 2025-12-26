@@ -1,3 +1,3 @@
-```
-deno task start
+```sh
+docker compose up --build -d
 ```
