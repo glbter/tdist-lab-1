@@ -1,0 +1,13 @@
+{
+  "imports": {
+    "@fluent-org/logger": "npm:@fluent-org/logger@^1.0.10",
+    "hono": "jsr:@hono/hono@^4.11.1"
+  },
+  "tasks": {
+    "start": "deno run --allow-net src/main.ts"
+  },
+  "compilerOptions": {
+    "jsx": "precompile",
+    "jsxImportSource": "hono/jsx"
+  }
+}

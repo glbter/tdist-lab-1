@@ -1,0 +1,30 @@
+{
+  "version": "5",
+  "specifiers": {
+    "jsr:@hono/hono@^4.11.1": "4.11.1",
+    "npm:@fluent-org/logger@^1.0.10": "1.0.10"
+  },
+  "jsr": {
+    "@hono/hono@4.11.1": {
+      "integrity": "28bb28c7322a1379e7132af05ef76aef09f86bb8cdd7077c67e004dea288ac0d"
+    }
+  },
+  "npm": {
+    "@fluent-org/logger@1.0.10": {
+      "integrity": "sha512-7gWfwknDWlcvh92sbUGj1pbGyKwkprfNH2ZuFTgCBQLQmcexvFEYh70z69S/TLnQ6z9sqpgfT/gyHrudBqRtZg==",
+      "dependencies": [
+        "@msgpack/msgpack"
+      ],
+      "bin": true
+    },
+    "@msgpack/msgpack@2.8.0": {
+      "integrity": "sha512-h9u4u/jiIRKbq25PM+zymTyW6bhTzELvOoUd+AvYriWOAKpLGnIamaET3pnHYoI5iYphAHBI4ayx0MehR+VVPQ=="
+    }
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@hono/hono@^4.11.1",
+      "npm:@fluent-org/logger@^1.0.10"
+    ]
+  }
+}

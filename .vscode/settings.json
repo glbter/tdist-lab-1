@@ -1,0 +1,7 @@
+{
+  "deno.enablePaths": [
+    "./app"
+  ],
+  "editor.inlayHints.enabled": "on",
+  "git.enabled": false
+}
